@@ -196,18 +196,35 @@ const Billing = () => {
       />
 
       <EditBillModal
-        showEditModal={showEditModal}
-        setShowEditModal={setShowEditModal}
-        editingBill={editingBill}
-        setEditingBill={setEditingBill}
-        formData={formData}
-        handleInputChange={handleInputChange}
-        handleItemChange={handleItemChange}
-        addItem={addItem}
-        removeItem={removeItem}
-        handleUpdateBill={handleUpdateBill}
-        resetForm={resetForm}
-      />
+  showEditModal={showEditModal}
+  setShowEditModal={setShowEditModal}
+  editingBill={editingBill}
+  setEditingBill={setEditingBill}
+  formData={formData}
+  handleInputChange={handleInputChange}
+  handleItemChange={handleItemChange}
+  addItem={addItem}
+  removeItem={removeItem}
+  handleUpdateBill={handleUpdateBill}
+  resetForm={resetForm}
+  // Add these props:
+  handleClientNameChange={handleClientNameChange}
+  selectClient={selectClient}
+  clientSuggestions={clientSuggestions}
+  showClientSuggestions={showClientSuggestions}
+  setShowClientSuggestions={setShowClientSuggestions}
+  setShowClientModal={setShowClientModal}
+  // Add calculation functions:
+  calculateSubtotal={calculateSubtotal}
+  calculateGrossAmount={calculateGrossAmount}
+  calculateCGST={calculateCGST}
+  calculateSGST={calculateSGST}
+  calculateIGST={calculateIGST}
+  calculateTotalWithTax={calculateTotalWithTax}
+  calculateTDS={calculateTDS}
+  calculateRetention={calculateRetention}
+  calculateNetPayable={calculateNetPayable}
+/>
     </div>
   );
 };

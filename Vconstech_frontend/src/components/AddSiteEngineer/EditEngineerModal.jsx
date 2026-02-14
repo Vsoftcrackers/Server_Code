@@ -238,7 +238,7 @@ const EditEngineerModal = ({ isOpen, onClose, onSubmit, isSubmitting, engineer }
                   onChange={handleChange}
                   className={`w-full px-4 py-2 border ${
                     errors.name ? 'border-red-500' : 'border-gray-300'
-                  } rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent`}
+                  } rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent outline-none`}
                   placeholder="Enter full name"
                   disabled={isSubmitting}
                 />
@@ -258,7 +258,7 @@ const EditEngineerModal = ({ isOpen, onClose, onSubmit, isSubmitting, engineer }
                   onChange={handleChange}
                   className={`w-full px-4 py-2 border ${
                     errors.empId ? 'border-red-500' : 'border-gray-300'
-                  } rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent`}
+                  } rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent outline-none`}
                   placeholder="Enter employee ID"
                   disabled={isSubmitting}
                 />
@@ -279,7 +279,7 @@ const EditEngineerModal = ({ isOpen, onClose, onSubmit, isSubmitting, engineer }
                     onChange={handleChange}
                     className={`w-full px-4 py-2 border ${
                       errors.phone ? 'border-red-500' : 'border-gray-300'
-                    } rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent`}
+                    } rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent outline-none`}
                     placeholder="10 digit number"
                     maxLength="10"
                     disabled={isSubmitting}
@@ -299,7 +299,7 @@ const EditEngineerModal = ({ isOpen, onClose, onSubmit, isSubmitting, engineer }
                     onChange={handleChange}
                     className={`w-full px-4 py-2 border ${
                       errors.alternatePhone ? 'border-red-500' : 'border-gray-300'
-                    } rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent`}
+                    } rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent outline-none`}
                     placeholder="10 digit number (optional)"
                     maxLength="10"
                     disabled={isSubmitting}
@@ -323,7 +323,7 @@ const EditEngineerModal = ({ isOpen, onClose, onSubmit, isSubmitting, engineer }
                   rows="3"
                   className={`w-full px-4 py-2 border ${
                     errors.address ? 'border-red-500' : 'border-gray-300'
-                  } rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent`}
+                  } rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent outline-none`}
                   placeholder="Enter full address"
                   disabled={isSubmitting}
                 />
@@ -353,7 +353,7 @@ const EditEngineerModal = ({ isOpen, onClose, onSubmit, isSubmitting, engineer }
                     onChange={handleChange}
                     className={`w-full pl-10 pr-4 py-2 border ${
                       errors.username ? 'border-red-500' : 'border-gray-300'
-                    } rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent`}
+                    } rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent outline-none`}
                     placeholder="Enter username"
                     disabled={isSubmitting}
                   />
@@ -378,7 +378,7 @@ const EditEngineerModal = ({ isOpen, onClose, onSubmit, isSubmitting, engineer }
                     onChange={handleChange}
                     className={`w-full pl-10 pr-20 py-2 border ${
                       errors.password ? 'border-red-500' : 'border-gray-300'
-                    } rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent`}
+                    } rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent outline-none`}
                     placeholder="Enter password"
                     disabled={isSubmitting}
                   />

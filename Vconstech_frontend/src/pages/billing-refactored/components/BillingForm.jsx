@@ -7,6 +7,7 @@ import AdditionalInfo from './form-section/AdditionalInfo';
 import CompanyInformation from './form-section/CompanyInformation';
 import PaymentDetails from './form-section/PaymentDetails';
 import TaxAndDeductions from './form-section/TaxAndDeductions';
+import AdditionalCharges from './form-section/AdditionalCharges';
 
 const BillingForm = ({
   formData,
@@ -133,6 +134,10 @@ const BillingForm = ({
           handleInputChange={handleInputChange}
         />
 
+        <AdditionalCharges
+        formData={formData}
+        handleInputChange={handleInputChange}
+/>
         <AdditionalInfo
           formData={formData}
           handleInputChange={handleInputChange} 

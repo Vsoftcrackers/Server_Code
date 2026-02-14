@@ -124,7 +124,7 @@ export const printBill = (bill) => {
         .header {
           display: flex;
           justify-content: space-between;
-          align-items: flex-start;
+          align-items: center;
           border-bottom: 4px solid #ffbe2a;
           padding-bottom: 20px;
           margin-bottom: 30px;

@@ -21,8 +21,7 @@ const BillSummary = ({
       <div className="space-y-3">
         <div className="flex justify-between text-gray-700 text-l">
           <span className="font-semibold">Subtotal (Items):</span>
-          <span className="font-bold">₹ {calculateSubtotal().toFixed(2)}</span>
-        </div>
+<span className="font-bold">₹ {calculateSubtotal().toFixed(2)}</span>        </div>
         
         {(formData.labourCharges > 0 || formData.transportCharges > 0 || formData.otherCharges > 0) && (
           <>
@@ -54,8 +53,7 @@ const BillSummary = ({
         {Number(formData.cgst) > 0 && 
           <div className="flex justify-between text-gray-600">
             <span className="text-l pl-4">+ CGST ({formData.cgst}%):</span>
-            <span>₹ {calculateCGST().toFixed(2)}</span>
-          </div>
+<span>₹ {calculateCGST().toFixed(2)}</span>          </div>
         
 }
         {formData.sgst > 0 && (

@@ -4,6 +4,10 @@ import BillInformation from './form-section/BillInformation';
 import ClientInformation from './form-section/ClientInformation';
 import ProjectInformation from './form-section/ProjectInformation';
 import BillItems from './form-section/BillItems';
+import CompanyInformation from './form-section/CompanyInformation';
+import PaymentDetails from './form-section/PaymentDetails';
+import BillSummary from './form-section/BillSummary';
+import TaxAndDeductions from './form-section/TaxAndDeductions';
 
 const EditBillModal = ({
   showEditModal,
@@ -17,13 +21,22 @@ const EditBillModal = ({
   removeItem,
   handleUpdateBill,
   resetForm,
-  // Add these new props for ClientInformation component
   handleClientNameChange,
   selectClient,
   clientSuggestions,
   showClientSuggestions,
   setShowClientSuggestions,
   setShowClientModal,
+  // Add these calculation functions:
+  calculateSubtotal,
+  calculateGrossAmount,
+  calculateCGST,
+  calculateSGST,
+  calculateIGST,
+  calculateTotalWithTax,
+  calculateTDS,
+  calculateRetention,
+  calculateNetPayable,
 }) => {
   if (!showEditModal) return null;
 
@@ -67,11 +80,23 @@ const EditBillModal = ({
               setShowClientModal={setShowClientModal}
             />
 
+              <CompanyInformation
+              formData={formData} 
+              handleInputChange ={handleInputChange}
+              />
+
             {/* Project Information */}
             <ProjectInformation
               formData={formData}
               handleInputChange={handleInputChange}
             />
+
+
+          <PaymentDetails 
+            formData={formData}
+             activetab={formData.activeTab}
+             handleInputChange={handleInputChange}
+             /> 
 
             {/* Bill Items */}
             <BillItems
@@ -81,7 +106,26 @@ const EditBillModal = ({
               addItem={addItem}
               removeItem={removeItem}
             />
-          </div>
+
+            <TaxAndDeductions
+            formData={formData} 
+            handleInputChange={handleInputChange}
+            />
+
+            {/* {/* <BillSummary
+  formData={formData} 
+  activeTab={formData.billType}
+  calculateSubtotal={calculateSubtotal}
+  calculateGrossAmount={calculateGrossAmount}
+  calculateCGST={calculateCGST}
+  calculateSGST={calculateSGST}
+  calculateIGST={calculateIGST}
+  calculateTotalWithTax={calculateTotalWithTax}
+  calculateTDS={calculateTDS}
+  calculateRetention={calculateRetention}
+  calculateNetPayable={calculateNetPayable}
+/> */}
+           </div> 
 
           <div className="flex gap-3 mt-6 pt-6 border-t">
             <button

@@ -33,6 +33,7 @@ const CompanyInformation = ({ formData, handleInputChange }) => {
             onChange={handleInputChange}
             placeholder="29XXXXXXXXXXXXX"
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ffbe2a] focus:border-transparent outline-none"
+          required
           />
         </div>
 

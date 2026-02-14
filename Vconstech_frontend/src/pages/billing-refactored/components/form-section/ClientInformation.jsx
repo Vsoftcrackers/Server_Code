@@ -106,11 +106,11 @@ const ClientInformation = ({
           <input
             type="text"
             name="clientGST"
-            value={formData.clientGST}
+            value={formData.clientGST || ""}
             onChange={handleInputChange}
             placeholder="29XXXXXX..."
             className="w-full max-w-full px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base border border-gray-300 rounded-md sm:rounded-lg focus:ring-2 focus:ring-[#ffbe2a] focus:border-transparent outline-none"
-            readOnly
+            required
           />
         </div>
 
@@ -121,7 +121,7 @@ const ClientInformation = ({
           </label>
           <textarea
             name="clientAddress"
-            value={formData.clientAddress}
+            value={formData.clientAddress || ""}
             onChange={handleInputChange}
             rows="2"
             placeholder="Client Address"
@@ -138,7 +138,7 @@ const ClientInformation = ({
           <input
             type="text"
             name="companyName"
-            value={formData.companyName}
+            value={formData.companyName || ""}
             onChange={handleInputChange}
             placeholder="Company Name"
             className="w-full max-w-full px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base border border-gray-300 rounded-md sm:rounded-lg focus:ring-2 focus:ring-[#ffbe2a] focus:border-transparent outline-none"
@@ -156,7 +156,7 @@ const ClientInformation = ({
             <input
               type="tel"
               name="clientPhone"
-              value={formData.clientPhone}
+              value={formData.clientPhone ||""}
               onChange={handleInputChange}
               placeholder="+91 XXXXX..."
               className="w-full max-w-full pl-7 sm:pl-10 pr-2 sm:pr-4 py-1.5 sm:py-2 text-xs sm:text-base border border-gray-300 rounded-md sm:rounded-lg focus:ring-2 focus:ring-[#ffbe2a] focus:border-transparent outline-none"
@@ -173,7 +173,7 @@ const ClientInformation = ({
           <input
             type="email"
             name="clientEmail"
-            value={formData.clientEmail}
+            value={formData.clientEmail || " "}
             onChange={handleInputChange}
             placeholder="client@example.com"
             className="w-full max-w-full px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base border border-gray-300 rounded-md sm:rounded-lg focus:ring-2 focus:ring-[#ffbe2a] focus:border-transparent outline-none"

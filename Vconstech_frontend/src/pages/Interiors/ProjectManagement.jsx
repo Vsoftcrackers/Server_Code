@@ -489,7 +489,7 @@ const handleEditProject = (project) => {
                     placeholder="Search projects..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-9 sm:pl-10 pr-4 py-2 text-sm border border-gray-300 rounded-lg  focus:border-transparent"
+                    className="w-full pl-9 sm:pl-10 pr-4 py-2 text-sm border border-gray-300 rounded-lg  focus:ring-2 focus:ring-[#ffbe2a] focus:border-transparent outline-none"
                   />
                 </div>
                 <div className="relative">
